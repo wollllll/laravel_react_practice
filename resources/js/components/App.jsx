@@ -3,18 +3,18 @@ import ReactDOM from 'react-dom';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 import NavBar from './views/common/NavBar';
-import UserIndex from './views/users';
+import IndexUser from './views/users';
 import Show from './views/users/Show';
-import TopIndex from './views/tops';
+import IndexTop from './views/tops';
 
 const App = () => {
     return (
         <Router>
-            <div>
+            <div className="container">
                 <NavBar/>
-                <Route exact path="/" component={TopIndex}/>
-                <Route exact path="/user" component={UserIndex}/>
-                <Route path="/user/:id" component={Show} />
+                <Route exact path="/" component={IndexTop}/>
+                <Route exact path="/users" component={IndexUser}/>
+                <Route path="/users/:id" component={Show} />
             </div>
         </Router>
     )

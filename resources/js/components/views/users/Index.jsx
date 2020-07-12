@@ -8,7 +8,7 @@ function Index() {
         getUsers()
     }, []);
     const getUsers = async () => {
-        const response = await axios.get('/api/user/get');
+        const response = await axios.get('/api/users/get');
         setUsers(response.data.users)
     }
 
@@ -19,7 +19,7 @@ function Index() {
                 {users.map((user) =>
                     <li key={user.id}>
                         {user.name}
-                        <Link to={`/user/${user.id}`}>
+                        <Link to={`/users/${user.id}`}>
                             詳細
                         </Link>
                     </li>

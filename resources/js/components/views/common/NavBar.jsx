@@ -9,8 +9,8 @@ const NavBar = () => {
                     <Link to="/">Top</Link>
                 </li>
                 <li className="ml-2">
-                    <Link to="/user">
-                        User
+                    <Link to="/users">
+                        Users
                     </Link>
                 </li>
             </ul>
